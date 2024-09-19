@@ -1,0 +1,21 @@
+<% layout('layout/main') -%>
+<% block('title', 'Compose') -%>
+
+<div class="container compose__container">
+  <h1 class="blog-heading">Compose</h1>
+  <form action="/compose" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" name="postTitle" required>
+    </div>
+    <div class="form-group">
+      <label>Post</label>
+      <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea>
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" name="image">
+    </div>
+    <button class="btn btn-primary" type="submit" name="button">Publish</button>
+  </form>
+</div>
